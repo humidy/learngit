@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Headlines</title>
+    <style type="text/css">
+        h1{
+            font-size: 24px;
+            font-weight: bold;
+            background-color: red;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Humidy DreamWorks</h1>
+    {% for article in articles %}
+        <b><a href="{{article.link}}">{{article.title}}</a></b> <br />
+        <i>{{article.published}}</i><br />
+        <p>{{article.summary}}</p>
+        <hr />
+    {% endfor %}
+</body>
+</html>
